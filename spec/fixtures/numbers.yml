@@ -1,0 +1,9 @@
+sfg_thun:
+  muni: thun
+  type: sfg
+  value: 3
+
+sfg_muri:
+  muni: muri
+  type: sfg
+  value: 5

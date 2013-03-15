@@ -1,0 +1,22 @@
+aarberg:
+  name: Aarberg
+  people: 4090
+
+bern:
+  name: Bern
+  people: 126664
+  agglo: bern
+
+muri:
+  name: Muri b.B.
+  people: 12369
+  agglo: bern
+
+thun:
+  name: Thun 
+  people: 42623 
+  agglo: thun
+
+lenk:
+  name: Lenk
+  people: 2419

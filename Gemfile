@@ -1,16 +1,18 @@
 source 'https://rubygems.org'
+
 gem 'rails', '3.2.12'
 
-gem 'activerecord-import'
+gem 'thin'
 gem 'slim'
+gem 'activerecord-import'
+gem 'geocoder'
+gem 'rails_config'
 
 group :production do
   gem 'pg'
 end
 
-
 group :development, :test do
-  gem 'thin'
   gem 'sqlite3'
   gem 'rb-inotify'
   gem 'quiet_assets'

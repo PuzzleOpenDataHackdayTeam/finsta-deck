@@ -58,6 +58,7 @@ GEM
     execjs (1.4.0)
       multi_json (~> 1.0)
     ffi (1.4.0)
+    geocoder (1.1.6)
     guard (1.6.2)
       listen (>= 0.6.0)
       lumberjack (>= 1.0.2)
@@ -118,6 +119,8 @@ GEM
       activesupport (= 3.2.12)
       bundler (~> 1.0)
       railties (= 3.2.12)
+    rails_config (0.3.2)
+      activesupport (>= 3.0)
     railties (3.2.12)
       actionpack (= 3.2.12)
       activesupport (= 3.2.12)
@@ -187,6 +190,7 @@ DEPENDENCIES
   activerecord-import
   better_errors
   coffee-rails (~> 3.2.1)
+  geocoder
   guard-rspec
   jquery-rails
   jquery_mobile_rails
@@ -198,6 +202,7 @@ DEPENDENCIES
   pry-rails
   quiet_assets
   rails (= 3.2.12)
+  rails_config
   rb-inotify
   rickshaw_rails
   rspec-rails

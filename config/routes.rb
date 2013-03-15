@@ -1,5 +1,11 @@
 FinstaDeck::Application.routes.draw do
+  %w(start show compare).each do |path|
+    get "/#{path}"  => "application##{path}", as: path
+  end
+
+
   root :to => 'application#start'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

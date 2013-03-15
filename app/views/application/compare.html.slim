@@ -1,0 +1,13 @@
+- title @result.winner == :me ? 'Gewonnen' : 'Verloren'
+
+= render 'compare'
+
+.progress-bar
+  div style="width: #{@result.percent.me}%"
+    = "#{@me.name} #{@result.values.me.value}"
+
+.progress-bar
+  div style="width: #{@result.percent.you}%"
+    = "#{@you.name} #{@result.values.you.value}"
+= link_to('Weiter gehts', show, data: { role: 'button' })
+
