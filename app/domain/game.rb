@@ -13,9 +13,8 @@ class Game
   def compare
     if me.value(type).value > you.value(type).value
       @stack = stack.dup.unshift(me, you)
-      result[:winner] = :me
     end
-    OpenStruct.new(result)
+    @result = Result.new(self, type)
   end
 
   private
@@ -38,10 +37,6 @@ class Game
 
   def type
     params[:type]
-  end
-
-  def result
-    @result ||= { winner: :you }
   end
 
 end

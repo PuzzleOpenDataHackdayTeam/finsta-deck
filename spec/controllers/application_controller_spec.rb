@@ -1,12 +1,6 @@
 require 'spec_helper'
 describe ApplicationController do
 
-  specify "#get :start" do
-    get :start
-    assigns(:stack).should have(Settings.start_count).items
-  end
-
-
   context "show" do
     let(:stack) { Muni.pluck(:id).sample(3) }
 
@@ -25,7 +19,6 @@ describe ApplicationController do
         you: munis_id(:thun), me: munis_id(:muri)
 
       assigns(:result).winner.should eq :me
-:A
 
       assigns(:stack).should have(3).items
       assigns(:stack)[0..1].should eq munis(:muri, :thun)

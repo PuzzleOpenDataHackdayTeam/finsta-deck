@@ -7,7 +7,7 @@ module ApplicationHelper
   end
 
   def show
-    show_path(stack: @stack.map(&:id))
+    show_path
   end
 
   def compare(type)

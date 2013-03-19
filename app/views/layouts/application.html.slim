@@ -17,11 +17,13 @@ html
         div data-role="header"
           h1=title
           = link_to('home', root_path, class: 'ui-btn-left', data: { icon: 'home' })
-          = link_to(@stack.count, '#', class: 'ui-btn-right')
+          - if @stack
+            = link_to(@stack.count, '#', class: 'ui-btn-right')
 
       div data-role="content"
         = yield
 
       div data-role="footer"
         ul
-          vi= "stack: [#{@stack.join(', ')}]"
+          - if @stack
+            li= "stack: [#{@stack.join(', ')}]"

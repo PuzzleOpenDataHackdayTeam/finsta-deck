@@ -1,47 +1,34 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
+  before_filter :populate_ivars, only: [:show, :compare]
 
-  def start
-    @stack = loader.new_stack
-  end
-
-  def show
-    @stack = loader.stack
-    @me = loader.me
-    @you = loader.you
-  end
 
   def compare
-    @you = loader.find(:you)
-    @me = loader.find(:me)
-    @result = service.compare
+    @result = game.compare
+    @stack = game.stack
 
-    @stack = @result.stack
-    render_view
+    render(decide_view(game.stack.size))
   end
 
 
   private
-  def loader
-    @loader ||= Loader.new(params)
+  def game
+    @game ||= Game.new(params)
   end
 
-  def service
-    Service.new(me: @me, you: @you,
-                type: params[:type].to_i,
-                stack: loader.stack)
+  def populate_ivars
+    @stack = game.stack
+    @me = game.me
+    @you = game.you
   end
 
-
-  def render_view
-    if @stack.size <= 0
-      render :game_over
-    elsif @stack.size >= Settings.needed_for_win
-      render :victory
+  def decide_view(size)
+    if size <= 0
+      :game_over
+    elsif size >= Settings.needed_for_win
+      :victory
     else
-      render :compare
+      :compare
     end
   end
-
-
 end
