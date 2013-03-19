@@ -14,7 +14,8 @@ end
 
 group :development, :test do
   gem 'sqlite3'
-  gem 'rb-inotify'
+  gem 'rb-fsevent', require: RUBY_PLATFORM.include?('darwin') && 'rb-fsevent'
+  gem 'rb-inotify', '~> 0.8.8', require: RUBY_PLATFORM.include?('linux') && 'rb-inotify'
   gem 'quiet_assets'
   gem 'better_errors'
   gem 'pry'
