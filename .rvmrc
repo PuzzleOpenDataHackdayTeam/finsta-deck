@@ -1,1 +1,1 @@
-rvm gemset use ruby-2.0.0@finsta-deck
+rvm use 2.0.0@finsta-deck
