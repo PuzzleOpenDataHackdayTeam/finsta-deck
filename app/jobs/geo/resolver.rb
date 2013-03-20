@@ -20,7 +20,7 @@ module Geo
           csv << result.values
         end
       end
-      File.write(GEO::FILE, data)
+      File.write(Geo::FILE, data)
     end
   end
 end
