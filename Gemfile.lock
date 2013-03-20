@@ -86,6 +86,7 @@ GEM
     method_source (0.8.1)
     mime-types (1.21)
     multi_json (1.6.1)
+    nokogiri (1.5.8)
     pg (0.14.1)
     polyglot (0.3.3)
     pry (0.9.12)
@@ -194,6 +195,7 @@ DEPENDENCIES
   guard-rspec
   jquery-rails
   jquery_mobile_rails
+  nokogiri
   pg
   pry
   pry-debugger

@@ -13,6 +13,7 @@ group :production do
 end
 
 group :development, :test do
+  gem 'nokogiri'
   gem 'sqlite3'
   gem 'quiet_assets'
   gem 'better_errors'
