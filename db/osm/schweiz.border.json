@@ -1,0 +1,12 @@
+{ 
+  "layers": [ { 
+    "src": "postgis:dbname=osm",
+    "table": "planet_osm_line",
+    "query": "boundary = 'administrative' and admin_level='2'",
+    "simplify": "2"
+  } ],
+  "export": {
+    "width": 640,
+    "height": 320
+  }
+}
