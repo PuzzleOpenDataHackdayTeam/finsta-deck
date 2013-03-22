@@ -12,5 +12,16 @@ class Type < ActiveRecord::Base
     [id, name, formatted_unit].join(', ')
   end
 
+  def pretty_name
+    self.class.pretty_names[id]
+  end
+
+  def self.pretty_names
+    { 1 => "Selbstfinanzierung",
+      5 => "Verschuldungsanteil",
+      34 => "Fremdkapital / Einwohner",
+      38 => "Ausgaben pro Schüler" }
+  end
+
 
 end

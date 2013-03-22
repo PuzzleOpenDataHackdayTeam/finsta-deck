@@ -8,7 +8,7 @@
       h2= @you.name
 
 .game-msg
-  h1.bounceInLeft.animated= @type.name
+  h1.bounceInLeft.animated= @type.pretty_name
   .progress
     .progress-bar.progress-player.animated.bounceWidth style="width:#{@result.percent.me}%"
     .progress-bar.progress-opponent.animated.bounceWidth style="width:#{@result.percent.you}%"
@@ -21,6 +21,7 @@
         ' Du bekommst eine Karte!
       - else
         strong Verloren!
+        br
         ' Du verlierst eine Karte!
 
 .player

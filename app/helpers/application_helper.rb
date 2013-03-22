@@ -32,11 +32,9 @@ module ApplicationHelper
     image_tag(Maps::GoogleStatic.new.url(muni))
   end
 
-
   def types
-    { 1 => "Selbstfinanzierungsgrad",
-      5 => "Bruttoverschuldungsanteil",
-      34 => "Fremdkapital / Einwohner",
-      38 => "Ausgaben pro Schüler" }
+    Type.pretty_names
   end
+
+
 end
