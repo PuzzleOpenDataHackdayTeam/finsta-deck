@@ -23,5 +23,5 @@ html
           - if @stack
             = link_to(@stack.count, '#', class: 'ui-btn-right')
 
-      div data-role="content"
+      #content data-role="content"
         = yield
