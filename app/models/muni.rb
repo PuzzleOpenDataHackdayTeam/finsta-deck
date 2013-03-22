@@ -2,6 +2,8 @@ class Muni < ActiveRecord::Base
   attr_accessible :name, :agglo, :people
   has_many :numbers
 
+  default_scope -> { includes(numbers: [:type]) }
+
   def self.load(ids)
     ids =  ids.map(&:to_i)
     all = Muni.where(id: ids).each_with_object({}) do |muni, memo|
@@ -19,7 +21,7 @@ class Muni < ActiveRecord::Base
   end
 
   def value(type_id)
-    numbers.where(type_id: type_id).first
+    numbers.find { |number| number.type_id == Integer(type_id) }
   end
 
 end

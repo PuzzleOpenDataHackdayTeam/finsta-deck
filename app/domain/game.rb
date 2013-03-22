@@ -30,11 +30,11 @@ class Game
   end
 
   def initialize_you
-    @you = params[:you] ? Muni.find(params[:you]) : (Muni.all - stack).sample
+    @you = params[:you] ? Muni.includes(numbers: [:type]).find(params[:you]) : (Muni.all - stack).sample
   end
 
   def initialize_me
-    @me = params[:me] ? Muni.find(params[:me]) : stack.pop
+    @me = params[:me] ? Muni.includes(numbers: [:type]).find(params[:me]) : stack.pop
   end
 
   def type
