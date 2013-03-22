@@ -44,11 +44,17 @@ $default-transition-function : ease;
   z-index:1;
   width: 100%;
   overflow: auto;
+  padding: 0 !important;
 }
 
 #compare .ui-content {
   overflow: hidden;
+
 }
+.compare {
+  background: $orange;
+}
+
 
 .current .card {
   margin-top: 70px
@@ -59,18 +65,13 @@ $default-transition-function : ease;
 //////////////////////
 
 
-// Game Message
-.compare {
-  background: $orange;
-}
+// Game
 
 .game-msg {
   position: absolute;
-  top: 50%;
-  width: 105%;
+  top: 100px;
+  width: 100%;
   height: 180px;
-  margin-top: -100px;
-  margin-left: -8%;
 
   @include rotate(- 1.5deg);
   font-family: 'Exo', sans-serif;
@@ -80,19 +81,31 @@ $default-transition-function : ease;
 }
 .ui-body-c .game-msg h1 {
   color: white;
-  font-size: 3em;
+  font-size: 2em;
   font-weight: 900;
-  margin: 1em 0 0;
 
   -webkit-text-stroke:2px black;
   @include text-shadow(3px 3px 0 black);
+}
+
+.game-btn {
+  position: absolute;
+  z-index: 20;
+  zoom: 1;
+  top: 170px;
+  left: 50%;
+  width: 240px;
+  margin-left: -120px;
+  @include rotate(- 1.5deg);
+  .ui-btn-inner {
+    white-space: normal;
+  }
 }
 
 
 // Progress Bar
 .progress {
   background: rgba(red, 0.15);
-  width: 100%;
   height: 30px;
   padding: 5px;
 }
@@ -137,44 +150,38 @@ $default-transition-function : ease;
 
 // Player
 .player {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 50%;
-  margin: 0 (- $space);
+  position: relative;
+
 }
 .player .card {
   position: absolute;
-  bottom: -20px;
+  top: 150px;
   left: -20px;
   padding-bottom: $space + 20px;
-  z-index: 5;
+  height: 200px;
 }
 .player .card-title,
 .player .card-progress-nb {
   text-align: right;
 }
-.player .card-title {
+.player .card-title,
+.current .card-title {
   color: $green;
 }
 
 
 // Opponent
 .opponent {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 50%;
-  margin: 0 (- $space);
+  position: relative;
+  overflow: hidden;
+  height: 120px;
+  width: 100%;
 }
 .opponent .card {
   position: absolute;
   top: -20px;
   right: -20px;
   padding-top: $space + 20px;
-  z-index: 5;
 }
 
 .opponent .card-title {

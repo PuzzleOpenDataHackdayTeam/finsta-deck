@@ -1,6 +1,6 @@
 .card-title
   h2= muni.name
-  p= "#{number_with_delimiter(muni.people, delimiter: '.')} Einwohner"
+p= "#{number_with_delimiter(muni.people, delimiter: '.')} Einwohner"
 
 .card-map
   = google_map(muni)
