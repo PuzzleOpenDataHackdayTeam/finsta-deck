@@ -8,10 +8,10 @@
       h2= @you.name
 
 .game-msg
-  h1= @type.name
+  h1.bounceInLeft.animated= @type.name
   .progress
-    .progress-bar.progress-player style="width:#{@result.percent.you}%"
-    .progress-bar.progress-opponent style="width:#{@result.percent.me}%"
+    .progress-bar.progress-player.animated.bounceWidth style="width:#{@result.percent.me}%"
+    .progress-bar.progress-opponent.animated.bounceWidth style="width:#{@result.percent.you}%"
   = link_to(show, data: { role: 'button', transition: 'slide' }) do
     - if @result.winner == :me 
       ' Gewonnen! Du bekommst eine Karte!
