@@ -58,11 +58,13 @@ $default-transition-function : ease;
 
 // Game Message
 .game-msg {
+  position: absolute;
   @include rotate(- 1.5deg);
   font-family: 'Exo', sans-serif;
   font-style: italic;
+  text-align: center;
   margin: 0 (- $space);
-  background: url("bg-msg.png") $orange repeat top left;
+  //background: url("bg-msg.png") $orange repeat top left;
 }
 .ui-body-c .game-msg h1 {
   color: white;
