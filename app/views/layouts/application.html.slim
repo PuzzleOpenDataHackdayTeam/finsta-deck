@@ -18,9 +18,10 @@ html
       - if title
         div data-role="header" data-theme="c"
           h1=title
-          = link_to('Start', root_path, class: 'ui-btn-left', data: { icon: 'home'}) 
-          - if @stack
-            = link_to(@stack.count, '#', class: 'ui-btn-right')
+          - if action_name == 'start'
+            = link_to('Menu', menu_path, class: 'ui-btn-left', data: { icon: 'bars'}) 
+          -else 
+            = link_to('Start', root_path, class: 'ui-btn-left', data: { icon: 'home'}) 
 
       - if @content_css_class
         #content data-role="content" class="#{@content_css_class}"
