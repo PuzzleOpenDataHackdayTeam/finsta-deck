@@ -18,9 +18,13 @@ html
       - if title
         div data-role="header" data-theme="c"
           h1=title
-          = link_to('home', root_path, class: 'ui-btn-left', data: { icon: 'home'})
+          = link_to('New Game', root_path, class: 'ui-btn-left', data: { icon: 'home'}) 
           - if @stack
             = link_to(@stack.count, '#', class: 'ui-btn-right')
 
-      #content data-role="content"
-        = yield
+      - if @content_css_class
+        #content data-role="content" class="#{@content_css_class}"
+          = yield
+      - else      
+        #content data-role="content"
+          = yield
