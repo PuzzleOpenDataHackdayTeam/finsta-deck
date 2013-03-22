@@ -1,8 +1,22 @@
 # Finsta Deck
 
-Prototype of a "quartett" like card game for mobile based on finance data of Kanton Bern. You can play the prototype on your mobile at http://finq.herokuapp.com
+Finsta Deck is a "Top Trumps" inspired card game for mobile, based on finance data of the Canton Bern.
+You can play the current version on your mobile at http://quartett.herokuapp.com
 
 
-# Load data 
+# Setup
 
-* rake import geo:import 
+* install rvm http://rvm.io
+* bundle install
+* spring rake db:setup
+* spring rake import geo:import
+
+# Credits
+
+Puzzle ITC http://www.puzzle.ch
+
+* Pierre Fritsch
+* Roland Studer
+* Philipp Gassmann
+* Anselm Strauss
+* Andreas Maierhofer
