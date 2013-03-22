@@ -1,4 +1,7 @@
 - title 'Wähle Kennzahl'
 
-p="#{@me} vs. #{@you}"
-= render 'muni', muni: @me
+.game
+  p="#{@me} vs. #{@you}"
+
+.card
+  = render 'muni', muni: @me
