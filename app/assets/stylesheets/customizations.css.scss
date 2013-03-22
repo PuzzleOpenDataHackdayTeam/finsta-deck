@@ -170,8 +170,13 @@ $default-transition-function : ease;
 .opponent {
   position: relative;
   overflow: hidden;
-  height: 120px;
   width: 100%;
+}
+.compare .opponent {
+  height: 120px;
+}
+#show .opponent {
+  height: 90px;
 }
 .opponent .card {
   position: absolute;
@@ -182,4 +187,27 @@ $default-transition-function : ease;
 
 .opponent .card-title {
   color: $blue;
+}
+
+
+// Stack Circles
+.circles {
+  padding: 0px 10px;
+  clear: both;
+  height: 40px;
+}
+.circle {
+  width: 20px;
+  height: 20px;
+  margin: 1px;
+  border: 2px solid black;
+  @include border-radius(10px);
+  float: left;
+}
+.circle.me { 
+  background-color: $green;
+}
+
+.circle.you { 
+  background-color: $blue;
 }
