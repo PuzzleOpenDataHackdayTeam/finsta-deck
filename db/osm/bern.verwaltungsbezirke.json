@@ -4,71 +4,71 @@
       "src": "postgis:dbname=osm",
       "table": "planet_osm_line",
       "query": "boundary = 'administrative' and name='Bern - Berne'",
-      "attributes": "all"
+      "attributes": { "id": "base" } 
     },
     "jura": {
       "src": "postgis:dbname=osm",
       "table": "planet_osm_line",
       "query": "boundary = 'administrative' and name = 'Verwaltungskreis Berner Jura'",
-      "attributes": "all"
+      "attributes": { "id": "jura" } 
     },
     "seeland": {
       "src": "postgis:dbname=osm",
       "table": "planet_osm_line",
       "query": "boundary = 'administrative' and name = 'Verwaltungskreis Seeland'",
-      "attributes": "all"
+      "attributes": { "id": "seeland" } 
     },
     "mittelland": {
       "src": "postgis:dbname=osm",
       "table": "planet_osm_line",
       "query": "boundary = 'administrative' and name = 'Verwaltungskreis Bern-Mittelland'",
-      "attributes": "all"
+      "attributes": { "id": "mittelland" } 
     },
     "biel": {
       "src": "postgis:dbname=osm",
       "table": "planet_osm_line",
       "query": "boundary = 'administrative' and name = 'Verwaltungskreis Biel/Bienne'",
-      "attributes": "all"
+      "attributes": { "id": "biel" } 
     },
     "saanen": {
       "src": "postgis:dbname=osm",
       "table": "planet_osm_line",
       "query": "boundary = 'administrative' and name = 'Verwaltungskreis Obersimmental-Saanen'",
-      "attributes": "all"
+      "attributes": { "id": "saanen" } 
     },
     "frutigen": {
       "src": "postgis:dbname=osm",
       "table": "planet_osm_line",
       "query": "boundary = 'administrative' and name = 'Verwaltungskreis Frutigen-Niedersimmental'",
-      "attributes": "all"
+      "attributes": { "id": "frutigen" } 
     },
     "thun": {
       "src": "postgis:dbname=osm",
       "table": "planet_osm_line",
       "query": "boundary = 'administrative' and name = 'Verwaltungskreis Thun'",
-      "attributes": "all"
+      "attributes": { "id": "thun" } 
     },
     "emmental": {
       "src": "postgis:dbname=osm",
       "table": "planet_osm_line",
       "query": "boundary = 'administrative' and name = 'Verwaltungskreis Emmental'",
-      "attributes": "all"
+      "attributes": { "id": "emmental" } 
     },
     "oberaargau": {
       "src": "postgis:dbname=osm",
       "table": "planet_osm_line",
       "query": "boundary = 'administrative' and name = 'Verwaltungskreis Oberaargau'",
-      "attributes": "all"
+      "attributes": { "id": "oberaargau" } 
     },
     "interlaken": {
       "src": "postgis:dbname=osm",
       "table": "planet_osm_line",
       "query": "boundary = 'administrative' and name = 'Verwaltungskreis Interlaken-Oberhasli'",
-      "attributes": "all"
+      "attributes": { "id": "interlaken" } 
     }
   },
   "export": {
-    "width": 480,
-    "height": 360
+    "width": 400,
+    "height": 300
   }
 }
