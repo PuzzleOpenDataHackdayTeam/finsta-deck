@@ -4,8 +4,4 @@ class Number < ActiveRecord::Base
   belongs_to :muni
 
   scope :valid, scoped.includes(:type).merge(Type.valid).where('value != 0')
-
-  def to_s
-    [value, type.formatted_unit].join(' ')
-  end
 end

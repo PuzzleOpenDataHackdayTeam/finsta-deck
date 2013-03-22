@@ -36,5 +36,12 @@ module ApplicationHelper
     Type.pretty_names
   end
 
+  def format_number(number)
+    case number.type.unit
+    when /percent/ then number_to_percentage(number.value, precision: 2)
+    when /chf/ then  [number.value, 'CHF'].join(' ')
+    end
+  end
+
 
 end

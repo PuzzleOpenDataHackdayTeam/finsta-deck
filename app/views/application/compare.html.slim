@@ -3,7 +3,7 @@
 
 .opponent
   .card
-    p.card-progress-nb= @result.values.you
+    p.card-progress-nb= format_number(@result.values.you)
     .card-title
       h2= @you.name
 
@@ -28,6 +28,6 @@
   .card
     .card-title
       h2= @me.name
-    p.card-progress-nb= @result.values.me
+    p.card-progress-nb= format_number(@result.values.me)
 
 
