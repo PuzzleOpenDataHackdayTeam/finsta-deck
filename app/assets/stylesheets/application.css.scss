@@ -2,24 +2,121 @@
  *= require jquery.mobile.min
  */
 
+@import "compass";
+
+// Variables
+//////////////////////
+
+$space: 15px;
+
+// Color
+$grayLight: #ccc;
+$orange: #ea7810;
+
+// Transitions
+$default-transition-property : all;
+$default-transition-duration : 1s;
+$default-transition-function : ease;
+
+
+// Base
+//////////////////////
+#{headings(all)} {
+  font-family: 'Exo', sans-serif;
+}
+
+// Layout
+//////////////////////
+.ui-page {
+  overflow:hidden !important;
+  width:100%;
+}
+
+// Modules
+//////////////////////
+
+// Progress Bar
 .progress-bar {
   border: 1px solid black;
   border-radius: 14px;
 
 }
-.progress-bar > div { 
-  color: white; 
+.progress-bar > div {
+  color: white;
   background: green;
   overflow: hidden;
-  white-space: nowrap; 
+  white-space: nowrap;
   padding: 10px 20px;
   border-radius: 10px;
   text-align: right;
-  
+
   -webkit-animation: progress-bar 2s;
 }
-
-
 @-webkit-keyframes progress-bar {
    0% { width: 0; }
 }
+
+// Game Message
+.game-msg {
+  position: absolute;
+  @include rotate(- 1.5deg);
+  font-family: 'Exo', sans-serif;
+  font-style: italic;
+  text-align: center;
+  margin: 0 (- $space);
+  //background: url("bg-msg.png") $orange repeat top left;
+}
+.ui-body-c .game-msg h1 {
+  color: white;
+  font-size: 5em;
+  font-weight: 900;
+
+  -webkit-text-stroke:2px black;
+  @include text-shadow(3px 3px 0 black);
+}
+
+
+// Card
+.card {
+  width: 260px;
+  padding: $space;
+  background: white;
+  @include single-box-shadow(rgba(black, 0.4), 3px, 3px, 12px);
+  @include border-radius(8px);
+  @include rotate(- 1.5deg);
+}
+
+.card p {
+  margin: 0;
+}
+.card-title h2 {
+  font-style: italic;
+  font-size: 2em;
+  margin: 0;
+}
+.card-map {
+  margin: 0 (0 - $space);
+}
+
+
+// Player
+.player .card {
+  position: absolute;
+  bottom: -20px;
+  left: -20px;
+  padding-bottom: $space + 20px;
+}
+
+.player .card-title,
+.player .card-progress-nb {
+  text-align: right;
+}
+
+// Opponent
+.opponent .card {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  padding-top: $space + 20px;
+}
+

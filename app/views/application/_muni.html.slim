@@ -1,13 +1,16 @@
-h2= muni.name
-p= "#{number_with_delimiter(muni.people, delimiter: '.')} Einwohner"
+.card-title
+  h2= muni.name
+  p= "#{number_with_delimiter(muni.people, delimiter: '.')} Einwohner"
 
-= google_map(muni)
+.card-map
+  = google_map(muni)
 
-ul data-role="listview" data-inset="true" data-split-icon="info"
-  - types.each do |key, value| 
-    li
-      = link_to(compare(key), html_options = { :data => { :transition => "slide"}}) do
-        h2= value
-        p= muni.value(key)
-      = link_to(number_type_info_path(:type => key), html_options = { :data => { :rel => "dialog"}}) do
-      	info
+.card-info
+  ul data-role="listview" data-inset="true" data-split-icon="info"
+    - types.each do |key, value|
+      li data-icon="check"
+        = link_to(compare(key), html_options = { :data => { :transition => "slide"}}) do
+          h2= value
+          p= muni.value(key)
+	      = link_to(number_type_info_path(:type => key), html_options = { :data => { :rel => "dialog"}}) do
+	      	info

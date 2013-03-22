@@ -3,6 +3,9 @@ module Import
   class Job
     def run
       years = (2002..2011)
+      Muni.destroy_all
+      Type.destroy_all
+      Number.destroy_all
       valid_files.each do |file|
         mapper = Mapper.new(file, [2011])
         puts mapper.parser
