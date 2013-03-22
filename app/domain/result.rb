@@ -15,7 +15,9 @@ class Result
   end
 
   def calculate_percent(me, you)
-    one_percent = [me,you].max / 80
-    OpenStruct.new(me: me / one_percent, you: you / one_percent)
+    total = me + you
+    my_percent = (me / total * 100).ceil
+    your_percent = 100 - my_percent
+    OpenStruct.new(me: my_percent, you: your_percent)
   end
 end

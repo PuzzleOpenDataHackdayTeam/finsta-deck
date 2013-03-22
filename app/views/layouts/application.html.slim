@@ -17,9 +17,9 @@ html
   body
     div data-role="page" id="#{action_name}"
       - if title
-        div data-role="header"
+        div data-role="header" data-theme="c"
           h1=title
-          = link_to('home', root_path, class: 'ui-btn-left', data: { icon: 'home' })
+          = link_to('home', root_path, class: 'ui-btn-left', data: { icon: 'home'})
           - if @stack
             = link_to(@stack.count, '#', class: 'ui-btn-right')
 
