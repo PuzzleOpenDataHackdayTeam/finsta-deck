@@ -7,10 +7,11 @@
 // Variables
 //////////////////////
 
-$space: 16px;
+$space: 15px;
 
 // Color
 $grayLight: #ccc;
+$orange: #ea7810;
 
 // Transitions
 $default-transition-property : all;
@@ -20,16 +21,15 @@ $default-transition-function : ease;
 
 // Base
 //////////////////////
-body {
+#{headings(all)} {
   font-family: 'Exo', sans-serif;
 }
 
 // Layout
 //////////////////////
-.page {
-  overflow:hidden;
+.ui-page {
+  overflow:hidden !important;
   width:100%;
-  height: 100%;
 }
 
 // Modules
@@ -56,26 +56,64 @@ body {
    0% { width: 0; }
 }
 
+// Game Message
+.game-msg {
+  font-family: 'Exo', sans-serif;
+  font-style: italic;
+  margin: 0 (- $space);
+  background: url("bg-msg.png") $orange repeat top left;
+}
+.ui-body-c .game-msg h1 {
+  color: white;
+  font-size: 5em;
+  font-weight: 900;
+
+  -webkit-text-stroke:2px black;
+  @include text-shadow(3px 3px 0 black);
+}
+
+
 // Card
 .card {
+  width: 260px;
   padding: $space;
   background: white;
   @include single-box-shadow($grayLight, 3px, 3px, 12px);
   @include border-radius(8px);
-  @include rotate(1.5deg);
+  @include rotate(- 1.5deg);
 }
 
-.card #{headings(all)} {
-  font-family: 'Exo', sans-serif;
+.card p {
+  margin: 0;
 }
-
 .card-title h2 {
   font-style: italic;
   font-size: 2em;
   margin: 0;
 }
-
-
 .card-map {
   margin: 0 (0 - $space);
 }
+
+
+// Player
+.player .card {
+  position: absolute;
+  bottom: -20px;
+  left: -20px;
+  padding-bottom: $space + 20px;
+}
+
+.player .card-title,
+.player .card-progress-nb {
+  text-align: right;
+}
+
+// Opponent
+.opponent .card {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  padding-top: $space + 20px;
+}
+
