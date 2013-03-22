@@ -1,12 +1,20 @@
 { 
-  "layers": [ { 
-    "src": "postgis:dbname=osm",
-    "table": "planet_osm_line",
-    "query": "boundary = 'administrative' and (name='Bern - Berne' or name like '%Verwa%')"
-  }
-  ],
+  "layers": {
+    "base": { 
+      "src": "postgis:dbname=osm",
+      "table": "planet_osm_line",
+      "query": "boundary = 'administrative' and name='Bern - Berne'",
+      "attributes": "all"
+    },
+    "admin": {
+      "src": "postgis:dbname=osm",
+      "table": "planet_osm_line",
+      "query": "boundary = 'administrative' and name like '%Verwa%'",
+      "attributes": "all"
+    }
+  },
   "export": {
-    "width": 1000,
-    "height": 540
+    "width": 480,
+    "height": 360
   }
 }

@@ -15,6 +15,7 @@ class ApplicationController < ActionController::Base
     render :layout => "dialog"
   end
 
+
   private
   def game
     @game ||= Game.new(params)
