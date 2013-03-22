@@ -19,7 +19,7 @@ html
         div data-role="header" data-theme="c"
           h1=title
           - if action_name == 'start'
-            = link_to('Menu', menu_path, class: 'ui-btn-left', data: { icon: 'bars'}) 
+            = link_to('Info', menu_path, class: 'ui-btn-left', data: { icon: 'info'}) 
           -else 
             = link_to('Start', root_path, class: 'ui-btn-left', data: { icon: 'home'}) 
 
