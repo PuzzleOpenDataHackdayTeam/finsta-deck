@@ -13,6 +13,8 @@ class Game
   def compare
     if me.value(type).value > you.value(type).value
       @stack = stack.dup.unshift(me, you)
+    elsif me.value(type).value == you.value(type).value
+      @stack = stack.dup.unshift(me)
     end
     @result = Result.new(self, type)
   end
