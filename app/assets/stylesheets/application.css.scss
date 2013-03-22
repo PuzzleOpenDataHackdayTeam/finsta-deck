@@ -58,6 +58,7 @@ $default-transition-function : ease;
 
 // Game Message
 .game-msg {
+  @include rotate(- 1.5deg);
   font-family: 'Exo', sans-serif;
   font-style: italic;
   margin: 0 (- $space);
@@ -78,7 +79,7 @@ $default-transition-function : ease;
   width: 260px;
   padding: $space;
   background: white;
-  @include single-box-shadow($grayLight, 3px, 3px, 12px);
+  @include single-box-shadow(rgba(black, 0.4), 3px, 3px, 12px);
   @include border-radius(8px);
   @include rotate(- 1.5deg);
 }
