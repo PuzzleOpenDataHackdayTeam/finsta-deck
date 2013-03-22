@@ -43,5 +43,14 @@ describe Game do
     its(:me) { should eq munis(:thun) }
     its(:you) { should eq munis(:muri) }
   end
+
+  context "comparing, tie" do
+    let(:args)  { default_args.merge(type: types_id(:sfg), stack: munis_id(:bern), me: munis_id(:muri), you: munis_id(:muri2)) }
+    before { game.compare }
+
+    its(:stack) { should eq [munis(:muri), munis(:bern)] }
+    its(:me) { should eq munis(:muri) }
+    its(:you) { should eq munis(:muri2) }
+  end
 end
 

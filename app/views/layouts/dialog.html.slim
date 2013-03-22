@@ -12,10 +12,10 @@ html
     meta name="apple-mobile-web-app-status-bar-style" content="black"
 
   body
-    div data-role="dialog" id="#{action_name}"
+    div data-role="dialog" id="#{action_name}" data-overlay-theme="c"
       - if title
-        div data-role="header"
+        div data-role="header" data-theme="c"
           h1=title
 
-      div data-role="content"
+      div data-role="content" data-theme="c"
         = yield

@@ -1,5 +1,8 @@
 class Region < Struct.new(:id, :name)
 
+  def self.find(id)
+    @all.find { |region|  region.id == id }
+  end
   def self.all
     @all ||= [
       Region.new(241, "Berner Jura"),

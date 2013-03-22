@@ -7,3 +7,8 @@ sfg_muri:
   muni: muri
   type: sfg
   value: 5
+
+sfg_muri2:
+  muni: muri2
+  type: sfg
+  value: 5

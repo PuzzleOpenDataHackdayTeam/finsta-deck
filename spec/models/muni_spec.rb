@@ -1,7 +1,7 @@
 require 'spec_helper'
 describe Muni do
 
-  it { Muni.count.should eq 5 }
+  it { Muni.count.should eq 6 }
 
   context ".load(ids) maintains order" do
     let(:stack) { munis(:bern, :muri, :thun) }
