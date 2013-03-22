@@ -29,7 +29,7 @@ module ApplicationHelper
   end
 
   def google_map(muni)
-    content_tag(:iframe, '', width: '100%', height: '200', frameborder: 0, scrolling: 'no', marginheight: 0, marginwidth: 0, src: "#{muni.map}&z=12&output=embed")
+    image_tag(Maps::GoogleStatic.new.url(muni))
   end
 
 
