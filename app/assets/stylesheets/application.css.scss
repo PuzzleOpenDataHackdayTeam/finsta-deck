@@ -32,12 +32,26 @@ $default-transition-function : ease;
 
 // Layout
 //////////////////////
-#progress.ui-page {
-  position: relative;
-  overflow:hidden;
+
+.ui-header {
+  z-index: 2;
+}
+
+.ui-content {
+  position: absolute;
+  top: 44px;
+  bottom: 0px;
+  z-index:1;
   width: 100%;
-  height: 100%;
-  background: $orange;
+  overflow: auto;
+}
+
+#compare .ui-content {
+  overflow: hidden;
+}
+
+.current .card {
+  margin-top: 70px
 }
 
 
@@ -46,6 +60,10 @@ $default-transition-function : ease;
 
 
 // Game Message
+.compare {
+  background: $orange;
+}
+
 .game-msg {
   position: absolute;
   top: 50%;
@@ -103,6 +121,7 @@ $default-transition-function : ease;
   @include rotate(- 1.5deg);
   z-index: 10;
 }
+
 .card p {
   margin: 0;
 }

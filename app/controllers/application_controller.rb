@@ -6,6 +6,7 @@ class ApplicationController < ActionController::Base
   def compare
     @result = game.compare
     @stack = game.stack
+    @type = Type.find(params[:type])
 
     render(decide_view(game.stack.size))
   end
