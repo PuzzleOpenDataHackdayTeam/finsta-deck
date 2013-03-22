@@ -1,0 +1,26 @@
+doctype html
+html
+  head
+    title Finsta Quartett
+
+    = javascript_include_tag 'http://d3js.org/d3.v3.min.js'
+    = javascript_include_tag :application
+    = stylesheet_link_tag :application
+
+    meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"
+    meta name="apple-mobile-web-app-capable" content="yes"
+    meta name="apple-mobile-web-app-status-bar-style" content="black"
+
+  body
+    div data-role="dialog" id="#{action_name}"
+      - if title
+        div data-role="header"
+          h1=title
+
+      div data-role="content"
+        = yield
+
+      div data-role="footer"
+        ul
+          - if @stack
+            li= "stack: [#{@stack.join(', ')}]"

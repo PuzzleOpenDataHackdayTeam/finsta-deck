@@ -10,6 +10,10 @@ class ApplicationController < ActionController::Base
     render(decide_view(game.stack.size))
   end
 
+  def number_type_info
+    @type = Type.find(params[:type])
+    render :layout => "dialog"
+  end
 
   private
   def game
