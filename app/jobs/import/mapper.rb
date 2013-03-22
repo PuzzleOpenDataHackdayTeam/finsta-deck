@@ -12,7 +12,8 @@ module Import
     def update_municipalities
       existing = Muni.pluck(:id)
       new = rows.select { |row| !existing.include?(row.bfs_nr) }.select(&:valid?)
-      Muni.import([:id, :name, :people, :agglo], new.map(&:municipality))
+      Muni.import([:id, :name, :people, :agglo, :administration, :district, :bfs_type],
+                  new.map(&:municipality))
     end
 
     def update_number_kinds

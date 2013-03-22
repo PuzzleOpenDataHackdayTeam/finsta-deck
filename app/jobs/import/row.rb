@@ -1,7 +1,9 @@
 module Import
   class Row
     attr_reader :file, :name, :bfs_nr, :years, :municipality_id,
-      :people, :agglo, :years, :row
+      :people, :agglo, :years,
+      :administration, :district, :bfs_type,
+      :row
 
 
     def initialize(file, row, years)
@@ -13,6 +15,10 @@ module Import
       @bfs_nr = row['BFS-Nr.'].to_i
       @people = row['Anzahl Einwohner'].to_i
       @agglo = row['Agglomeration BFS-Nr.']
+      @administration = row['Verw.-Kreis '] # whitespace - yay
+
+      @district = row['Amtsbezirk']
+      @bfs_type = row['BFS Typ']
     end
 
 
@@ -24,7 +30,7 @@ module Import
     end
 
     def municipality
-      [bfs_nr, name, people, agglo]
+      [bfs_nr, name, people, agglo, administration, district, bfs_type]
     end
 
     def numbers(number_type_id)

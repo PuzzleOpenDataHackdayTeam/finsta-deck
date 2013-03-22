@@ -11,14 +11,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130315103924) do
+ActiveRecord::Schema.define(:version => 20130322093304) do
 
   create_table "munis", :force => true do |t|
     t.string  "name"
     t.string  "map"
     t.integer "people"
     t.integer "agglo"
+    t.integer "administration"
+    t.integer "district"
+    t.integer "bfs_type"
   end
+
+  add_index "munis", ["administration"], :name => "index_munis_on_administration"
+  add_index "munis", ["bfs_type"], :name => "index_munis_on_bfs_type"
+  add_index "munis", ["district"], :name => "index_munis_on_district"
 
   create_table "numbers", :force => true do |t|
     t.integer "muni_id"
