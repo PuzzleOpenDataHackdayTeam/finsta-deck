@@ -1,5 +1,5 @@
 FinstaDeck::Application.routes.draw do
-  %w(start show compare progress).each do |path|
+  %w(start show compare progress number_type_info).each do |path|
     get "/#{path}"  => "application##{path}", as: path
   end
 
