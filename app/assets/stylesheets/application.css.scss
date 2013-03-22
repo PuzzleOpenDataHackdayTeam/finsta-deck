@@ -3,6 +3,7 @@
  */
 
 @import "compass";
+@import "animation";
 
 // Variables
 //////////////////////
@@ -52,7 +53,6 @@ $default-transition-function : ease;
   height: 180px;
   margin-top: -100px;
   margin-left: -8%;
-  z-index: 10;
 
   @include rotate(- 1.5deg);
   font-family: 'Exo', sans-serif;
@@ -81,9 +81,6 @@ $default-transition-function : ease;
 .progress-bar {
   height: 30px;
 }
-@-webkit-keyframes progress-bar {
-   0% { width: 0; }
-}
 
 .progress-player {
   float: left;
@@ -104,8 +101,8 @@ $default-transition-function : ease;
   @include single-box-shadow(rgba(black, 0.4), 3px, 3px, 12px);
   @include border-radius(8px);
   @include rotate(- 1.5deg);
+  z-index: 10;
 }
-
 .card p {
   margin: 0;
 }
@@ -139,6 +136,10 @@ $default-transition-function : ease;
 .player .card-progress-nb {
   text-align: right;
 }
+.player .card-title {
+  color: $green;
+}
+
 
 // Opponent
 .opponent {
@@ -157,3 +158,6 @@ $default-transition-function : ease;
   z-index: 5;
 }
 
+.opponent .card-title {
+  color: $blue;
+}
