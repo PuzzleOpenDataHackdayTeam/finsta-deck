@@ -2,24 +2,28 @@
  *= require jquery.mobile.min
  */
 
+@import "compass";
+
 .progress-bar {
   border: 1px solid black;
   border-radius: 14px;
 
 }
-.progress-bar > div { 
-  color: white; 
+.progress-bar > div {
+  color: white;
   background: green;
   overflow: hidden;
-  white-space: nowrap; 
+  white-space: nowrap;
   padding: 10px 20px;
   border-radius: 10px;
   text-align: right;
-  
+
   -webkit-animation: progress-bar 2s;
 }
 
 
 @-webkit-keyframes progress-bar {
    0% { width: 0; }
+   @include border-radius(3px);
 }
+

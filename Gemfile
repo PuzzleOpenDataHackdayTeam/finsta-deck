@@ -38,6 +38,8 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
   gem 'rickshaw_rails'
   gem 'sass-rails',   '~> 3.2.3'
+  gem 'compass-rails'
+  gem 'compass'
   gem 'jquery-rails'
   gem 'jquery_mobile_rails'
   gem 'uglifier', '>= 1.0.3'
