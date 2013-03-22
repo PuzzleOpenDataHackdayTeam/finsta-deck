@@ -19,8 +19,3 @@ html
 
       div data-role="content"
         = yield
-
-      div data-role="footer"
-        ul
-          - if @stack
-            li= "stack: [#{@stack.join(', ')}]"

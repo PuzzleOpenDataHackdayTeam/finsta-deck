@@ -1,7 +1,11 @@
 - title 'Wähle Kennzahl'
 
-.game
-  p="#{@me} vs. #{@you}"
+.opponent
+	.card
+	  p.card-progress-nb versus
+	  .card-title
+ 	    h2= @you.name
 
-.card
-  = render 'muni', muni: @me
+.current
+	.card
+  	= render 'muni', muni: @me
