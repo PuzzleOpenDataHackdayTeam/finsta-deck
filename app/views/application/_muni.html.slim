@@ -1,11 +1,23 @@
-h2= muni.name
-p= "#{number_with_delimiter(muni.people, delimiter: '.')} Einwohner"
+.card-title
+  h2= muni.name
+  p= "#{number_with_delimiter(muni.people, delimiter: '.')} Einwohner"
 
-= google_map(muni)
+.card-map
+  = google_map(muni)
 
+<<<<<<< HEAD
 ul data-role="listview" data-inset="true"
   - types.each do |key, value| 
     li data-icon="check"
       = link_to(compare(key), html_options = { :data => { :transition => "slide"}}) do
         h2= value
         p= muni.value(key)
+=======
+.card-info
+  ul data-role="listview" data-inset="true"
+    - types.each do |key, value|
+      li data-icon="check"
+        = link_to(compare(key)) do
+          h2= value
+          p= muni.value(key)
+>>>>>>> Design first step

@@ -4,6 +4,38 @@
 
 @import "compass";
 
+// Variables
+//////////////////////
+
+$space: 16px;
+
+// Color
+$grayLight: #ccc;
+
+// Transitions
+$default-transition-property : all;
+$default-transition-duration : 1s;
+$default-transition-function : ease;
+
+
+// Base
+//////////////////////
+body {
+  font-family: 'Exo', sans-serif;
+}
+
+// Layout
+//////////////////////
+.page {
+  overflow:hidden;
+  width:100%;
+  height: 100%;
+}
+
+// Modules
+//////////////////////
+
+// Progress Bar
 .progress-bar {
   border: 1px solid black;
   border-radius: 14px;
@@ -20,10 +52,30 @@
 
   -webkit-animation: progress-bar 2s;
 }
-
-
 @-webkit-keyframes progress-bar {
    0% { width: 0; }
-   @include border-radius(3px);
 }
 
+// Card
+.card {
+  padding: $space;
+  background: white;
+  @include single-box-shadow($grayLight, 3px, 3px, 12px);
+  @include border-radius(8px);
+  @include rotate(1.5deg);
+}
+
+.card #{headings(all)} {
+  font-family: 'Exo', sans-serif;
+}
+
+.card-title h2 {
+  font-style: italic;
+  font-size: 2em;
+  margin: 0;
+}
+
+
+.card-map {
+  margin: 0 (0 - $space);
+}
