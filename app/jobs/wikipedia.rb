@@ -14,7 +14,6 @@ class Wikipedia
   end
 
   class Parser
-    require 'nokogiri'
     require 'csv'
 
     attr_reader :rows
