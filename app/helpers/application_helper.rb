@@ -7,7 +7,11 @@ module ApplicationHelper
   end
 
   def show
-    show_path
+    if @stack
+      show_path(stack: @stack.map(&:id))
+    else
+      show_path
+    end
   end
 
   def compare(type)
