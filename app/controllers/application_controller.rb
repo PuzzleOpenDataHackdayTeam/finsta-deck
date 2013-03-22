@@ -7,14 +7,13 @@ class ApplicationController < ActionController::Base
     @result = game.compare
     @stack = game.stack
     @type = Type.find(params[:type])
-
-    render(decide_view(game.stack.size))
   end
 
   def number_type_info
     @type = Type.find(params[:type])
     render :layout => "dialog"
   end
+
 
 
   private
@@ -28,13 +27,4 @@ class ApplicationController < ActionController::Base
     @you = game.you
   end
 
-  def decide_view(size)
-    if size <= 0
-      :game_over
-    elsif size >= Settings.needed_for_win
-      :victory
-    else
-      :compare
-    end
-  end
 end

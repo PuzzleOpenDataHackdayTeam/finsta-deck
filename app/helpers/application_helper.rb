@@ -7,10 +7,13 @@ module ApplicationHelper
   end
 
   def show
-    if @stack
-      show_path(stack: @stack.map(&:id))
+    size = @stack.size
+    if size <= 1
+     game_over_path
+    elsif size > Settings.needed_for_win
+      victory_path
     else
-      show_path
+      show_path(stack: @stack.map(&:id))
     end
   end
 
