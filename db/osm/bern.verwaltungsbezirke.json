@@ -6,10 +6,64 @@
       "query": "boundary = 'administrative' and name='Bern - Berne'",
       "attributes": "all"
     },
-    "admin": {
+    "jura": {
       "src": "postgis:dbname=osm",
       "table": "planet_osm_line",
-      "query": "boundary = 'administrative' and name like '%Verwa%'",
+      "query": "boundary = 'administrative' and name = 'Verwaltungskreis Berner Jura'",
+      "attributes": "all"
+    },
+    "seeland": {
+      "src": "postgis:dbname=osm",
+      "table": "planet_osm_line",
+      "query": "boundary = 'administrative' and name = 'Verwaltungskreis Seeland'",
+      "attributes": "all"
+    },
+    "mittelland": {
+      "src": "postgis:dbname=osm",
+      "table": "planet_osm_line",
+      "query": "boundary = 'administrative' and name = 'Verwaltungskreis Bern-Mittelland'",
+      "attributes": "all"
+    },
+    "biel": {
+      "src": "postgis:dbname=osm",
+      "table": "planet_osm_line",
+      "query": "boundary = 'administrative' and name = 'Verwaltungskreis Biel/Bienne'",
+      "attributes": "all"
+    },
+    "saanen": {
+      "src": "postgis:dbname=osm",
+      "table": "planet_osm_line",
+      "query": "boundary = 'administrative' and name = 'Verwaltungskreis Obersimmental-Saanen'",
+      "attributes": "all"
+    },
+    "frutigen": {
+      "src": "postgis:dbname=osm",
+      "table": "planet_osm_line",
+      "query": "boundary = 'administrative' and name = 'Verwaltungskreis Frutigen-Niedersimmental'",
+      "attributes": "all"
+    },
+    "thun": {
+      "src": "postgis:dbname=osm",
+      "table": "planet_osm_line",
+      "query": "boundary = 'administrative' and name = 'Verwaltungskreis Thun'",
+      "attributes": "all"
+    },
+    "emmental": {
+      "src": "postgis:dbname=osm",
+      "table": "planet_osm_line",
+      "query": "boundary = 'administrative' and name = 'Verwaltungskreis Emmental'",
+      "attributes": "all"
+    },
+    "oberaargau": {
+      "src": "postgis:dbname=osm",
+      "table": "planet_osm_line",
+      "query": "boundary = 'administrative' and name = 'Verwaltungskreis Oberaargau'",
+      "attributes": "all"
+    },
+    "interlaken": {
+      "src": "postgis:dbname=osm",
+      "table": "planet_osm_line",
+      "query": "boundary = 'administrative' and name = 'Verwaltungskreis Interlaken-Oberhasli'",
       "attributes": "all"
     }
   },
