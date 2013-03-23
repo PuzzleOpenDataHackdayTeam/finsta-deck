@@ -94,6 +94,7 @@ GEM
     method_source (0.8.1)
     mime-types (1.21)
     multi_json (1.7.1)
+    newrelic_rpm (3.6.0.78)
     pg (0.14.1)
     polyglot (0.3.3)
     pry (0.9.12)
@@ -204,6 +205,7 @@ DEPENDENCIES
   guard-rspec
   jquery-rails
   jquery_mobile_rails
+  newrelic_rpm
   pg
   pry
   pry-debugger

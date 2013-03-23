@@ -7,6 +7,7 @@ gem 'slim'
 gem 'activerecord-import'
 gem 'geocoder'
 gem 'rails_config'
+gem 'newrelic_rpm'
 
 group :production do
   gem 'pg'
