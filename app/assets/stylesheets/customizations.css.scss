@@ -33,6 +33,11 @@ $default-transition-function : ease;
   z-index: 2;
 }
 
+#show .ui-content {
+  padding: 0px;
+  overflow: hidden;
+}
+
 .compare.ui-content {
   position: absolute;
   top: 44px;
@@ -125,6 +130,10 @@ $default-transition-function : ease;
   z-index: 10;
 }
 
+.current .card {
+  margin-left: 5px;
+}
+
 .card p {
   margin: 0;
 }
@@ -177,6 +186,11 @@ $default-transition-function : ease;
 }
 #show .opponent {
   height: 90px;
+  .card-title {
+    @include rotate(180deg);
+    text-align: left;
+    padding-left: 10px;
+  }
 }
 .opponent .card {
   position: absolute;
