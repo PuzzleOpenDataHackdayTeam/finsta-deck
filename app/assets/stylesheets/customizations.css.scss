@@ -184,20 +184,33 @@ $default-transition-function : ease;
 .compare .opponent {
   height: 120px;
 }
+
+.opponent .card {
+  top: -20px;
+  padding-top: $space + 20px;
+}
+
 #show .opponent {
   height: 90px;
+  .card {
+    position: absolute;
+    left: 50px;
+  }
+
   .card-title {
     @include rotate(180deg);
     text-align: left;
-    padding-left: 10px;
   }
 }
-.opponent .card {
+
+#compare .opponent .card {
   position: absolute;
-  top: -20px;
   right: -20px;
-  padding-top: $space + 20px;
 }
+
+#compare .player .card {
+}
+
 
 .opponent .card-title {
   color: $blue;
