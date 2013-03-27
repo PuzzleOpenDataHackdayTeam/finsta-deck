@@ -194,7 +194,7 @@ $default-transition-function : ease;
   height: 90px;
   .card {
     position: absolute;
-    left: 50px;
+    left: 35px;
   }
 
   .card-title {
@@ -207,10 +207,6 @@ $default-transition-function : ease;
   position: absolute;
   right: -20px;
 }
-
-#compare .player .card {
-}
-
 
 .opponent .card-title {
   color: $blue;
