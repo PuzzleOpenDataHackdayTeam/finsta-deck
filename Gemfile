@@ -25,7 +25,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'guard-rspec'
   gem 'spring'
-
+  gem 'binding_of_caller'
 
   case RUBY_PLATFORM
   when /linux/ then gem 'rb-inotify', '~> 0.9'
